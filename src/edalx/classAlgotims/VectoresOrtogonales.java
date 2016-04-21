@@ -58,7 +58,8 @@ public class VectoresOrtogonales {
         double angulo=0;
         double lamda=0;
         Double[] cmvector3=new Double[numc1]; 
-        
+        Double[] cmvector4=new Double[numc1];
+        double lamda2=0;
         if((cmvector1[0]!=0||cmvector1[1]!=0)&&(cmvector2[0]!=0||cmvector2[1]!=0)){
               determ=cmvector1[0]*cmvector2[1]-cmvector1[1]*cmvector2[0];
               if(determ!=0){
@@ -72,6 +73,13 @@ public class VectoresOrtogonales {
                   System.out.println("\n\nEl ángulo entre los vectores es: "+angulo);
                   System.out.println("Vector v1: ("+cmvector1[0]+","+cmvector1[1]+")");
                   System.out.println("Vector v2: ("+cmvector3[0]+","+cmvector3[1]+")");
+                  System.out.println("\n\nProyección sobre el segundo vector");
+                  System.out.println("----------------------------------------------");
+                  lamda2=multco/Math.pow(nvector2,2);
+                  cmvector4[0]=cmvector1[0]-lamda2*cmvector2[0];
+                  cmvector4[1]=cmvector1[1]-lamda2*cmvector2[1];
+                  System.out.println("Vector v1: ("+cmvector2[0]+","+cmvector2[1]+")");
+                  System.out.println("Vector v2: ("+cmvector4[0]+","+cmvector4[1]+")");
               }else{
                   System.out.println("\nLos vectores son colineales");
               }
@@ -79,7 +87,7 @@ public class VectoresOrtogonales {
             System.out.println("\nAlguno de los vectores es nulo!!");
             
         }
-        
+
     }
     
 }
