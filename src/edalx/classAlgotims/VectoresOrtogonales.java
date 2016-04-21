@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package edalx.methods;
+package edalx.classAlgotims;
 
+import edalx.methods.*;
 import java.util.Scanner;
 
 /**
@@ -17,9 +18,9 @@ public class VectoresOrtogonales {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public void Ortogonales() {
         Scanner leer=new Scanner(System.in);
-        vecOrtogonales vecOr=new vecOrtogonales();
+        OperacionesVectores vecOr=new OperacionesVectores();
         int numc1=0;
         int numc2=0;
         String arComp1[]=new String[2];
@@ -63,7 +64,7 @@ public class VectoresOrtogonales {
               if(determ!=0){
                   nvector1=vecOr.normaVector(cmvector1);
                   nvector2=vecOr.normaVector(cmvector2);
-                  multco=cmvector1[0]*cmvector2[0]+cmvector1[1]*cmvector2[1];
+                  multco=vecOr.productoEscalar(cmvector1, cmvector2);
                   angulo=Math.acos(multco/(nvector1*nvector2));
                   lamda=multco/Math.pow(nvector1,2);
                   cmvector3[0]=cmvector2[0]-lamda*cmvector1[0];

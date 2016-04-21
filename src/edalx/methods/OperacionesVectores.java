@@ -10,7 +10,7 @@ package edalx.methods;
  *
  * @author Alexander
  */
-public class vecOrtogonales {
+public class OperacionesVectores {
     public double normaVector(Double[] vector){
         double norma=0;  
         double scnorma=0; //suma de los componentes al cuadrado
@@ -20,4 +20,12 @@ public class vecOrtogonales {
         norma=Math.sqrt(scnorma);
         return norma;
 }
+    public double productoEscalar(Double[] vect1, Double[] vect2){
+        double varResult=0;
+        for (int i = 0; i < vect1.length; i++) {
+            varResult=varResult+vect1[i]*vect2[i];            
+        }
+        return varResult;
+        
+    }
 }
