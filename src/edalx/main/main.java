@@ -6,7 +6,8 @@
 
 package edalx.main;
 
-import edalx.classAlgotims.VectoresOrtogonales;
+import edalx.numericAlgoritms.*;
+import java.util.Scanner;
 
 /**
  *
@@ -15,9 +16,26 @@ import edalx.classAlgotims.VectoresOrtogonales;
 public class main {
     
     public static void main(String[] args) {
+         VectoresOrtogonales alg=new VectoresOrtogonales();
+        CambioDeBase op=new CambioDeBase();
+        Scanner leer=new Scanner(System.in);
+        
         System.out.println("                    Algoritmos Análisis Numérico");
         System.out.println("-----------------------------------------------------------------------");
-        VectoresOrtogonales alg=new VectoresOrtogonales();
-        alg.Ortogonales();
+        System.out.println("Seleccione una opcion:");
+        System.out.println("1. Vectores ortogonales");
+        System.out.println("2. Cambio de base");
+        int opc=Integer.parseInt(leer.nextLine());
+        switch(opc){
+            case 1:
+              alg.Ortogonales();
+              break;
+            case 2:
+              op.mainBase();
+              break;
+            default:
+                System.out.println("Ha ingresado una opcion incorrecta");
+        }
+        
    }
 }
