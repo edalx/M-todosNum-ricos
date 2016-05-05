@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edalx.numericAlgoritms;
+package edalx.numericControllers;
 
 import edalx.methods.Bases;
 import java.util.Scanner;
@@ -20,7 +20,7 @@ public class CambioDeBase {
         System.out.println("-----Cambio de base-----");
         Bases nuevo = new Bases();
         Scanner leer = new Scanner(System.in);
-        System.out.println("Ingrese un número:");
+        System.out.println("Ingrese un numero:");
         String cadenaNum = leer.next();
         System.out.println("Ingrese la base original:");
         String baseNum = leer.next();
@@ -41,14 +41,18 @@ public class CambioDeBase {
         Integer snComa=Integer.parseInt(resultBase10.toString().substring(0, resultBase10.toString().length()-2));  
         Integer[] coefNum = new Integer[snComa.toString().length()];
         int aux=0;
-        
+        System.out.println(""+snComa);
+        System.out.println(""+resultBase10);
         for (int i = 0; i < snComa.toString().length(); i++) {
             Character sep = snComa.toString().charAt(snComa.toString().length() - (i + 1));
             aux=Integer.parseInt(sep.toString());
             coefNum[i]=aux;
+            System.out.println("--"+aux);
         }
         
         resultFinal= nuevo.base10_baseN(coefNum, baseC);
         System.out.println("El numero ( "+cadenaNum+" )"+baseNum+" es igual a ( "+resultFinal+" )"+baseCambio);
+        System.out.println("");
+        System.out.println("");
     }
 }

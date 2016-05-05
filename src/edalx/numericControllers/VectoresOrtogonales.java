@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edalx.numericAlgoritms;
+package edalx.numericControllers;
 
 import edalx.methods.*;
 import java.util.Scanner;
