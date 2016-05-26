@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package edalx.main;
 
 import edalx.numericControllers.CambioDeBase;
 import edalx.numericControllers.ControlerIntegracion;
 import edalx.numericControllers.DerivacionNumerica;
+import edalx.numericControllers.EcuacionesNoLineales;
 import edalx.numericControllers.VectoresOrtogonales;
 import java.util.Scanner;
 
@@ -17,13 +17,15 @@ import java.util.Scanner;
  * @author Alexander
  */
 public class View {
-    
+
     public static void main(String[] args) {
-        VectoresOrtogonales alg=new VectoresOrtogonales();
-        CambioDeBase op=new CambioDeBase();
-        ControlerIntegracion integra=new ControlerIntegracion();
-        DerivacionNumerica deriva=new DerivacionNumerica();
-        Scanner leer=new Scanner(System.in);
+        VectoresOrtogonales alg = new VectoresOrtogonales();
+        CambioDeBase op = new CambioDeBase();
+        ControlerIntegracion integra = new ControlerIntegracion();
+        DerivacionNumerica deriva = new DerivacionNumerica();
+        EcuacionesNoLineales ecuacNoLineal = new EcuacionesNoLineales();
+        Scanner leer = new Scanner(System.in);
+        int opc2 = 0;
         System.out.println("");
         System.out.println("");
         System.out.println("-----------------------------------------------------------------------");
@@ -34,23 +36,42 @@ public class View {
         System.out.println("2. Cambio de base");
         System.out.println("3. Integracion numerica");
         System.out.println("4. Derivacion numerica");
-        int opc=Integer.parseInt(leer.nextLine());
-        switch(opc){
+        System.out.println("5. Ecuaciones no lineales");
+        int opc = Integer.parseInt(leer.nextLine());
+        switch (opc) {
             case 1:
-              alg.Ortogonales();
-              break;
+                alg.Ortogonales();
+                break;
             case 2:
-              op.mainBase();
-              break;
+                op.mainBase();
+                break;
             case 3:
-              integra.main();
-              break;
+                integra.main();
+                break;
             case 4:
                 deriva.main();
+                break;
+            case 5:
+                System.out.println("Elija el método para la obtención de raices");
+                System.out.println("1) Bisección    2) Punto Fijo      3) Raphson");
+                opc2 = Integer.parseInt(leer.nextLine());
+                switch (opc2) {
+                    case 1:
+                        ecuacNoLineal.biseccion();
+                        break;
+                    case 2:
+                        ecuacNoLineal.puntoFijo();
+                        break;
+                    case 3:
+                        ecuacNoLineal.raphson();
+                        break;
+                    default:
+                        System.out.println("No ha elegido una opción correcta");
+                }
                 break;
             default:
                 System.out.println("Ha ingresado una opcion incorrecta");
         }
-        
-   }
+
+    }
 }
