@@ -9,6 +9,7 @@ import edalx.numericControllers.CambioDeBase;
 import edalx.numericControllers.ControlerIntegracion;
 import edalx.numericControllers.DerivacionNumerica;
 import edalx.numericControllers.EcuacionesNoLineales;
+import edalx.numericControllers.Interpolacion;
 import edalx.numericControllers.VectoresOrtogonales;
 import java.util.Scanner;
 
@@ -24,6 +25,7 @@ public class View {
         ControlerIntegracion integra = new ControlerIntegracion();
         DerivacionNumerica deriva = new DerivacionNumerica();
         EcuacionesNoLineales ecuacNoLineal = new EcuacionesNoLineales();
+        Interpolacion opInterpolate=new Interpolacion();
         Scanner leer = new Scanner(System.in);
         int opc2 = 0;
         System.out.println("");
@@ -37,6 +39,7 @@ public class View {
         System.out.println("3. Integracion numerica");
         System.out.println("4. Derivacion numerica");
         System.out.println("5. Ecuaciones no lineales");
+        System.out.println("6. Interpolacion");
         int opc = Integer.parseInt(leer.nextLine());
         switch (opc) {
             case 1:
@@ -68,6 +71,9 @@ public class View {
                     default:
                         System.out.println("No ha elegido una opción correcta");
                 }
+                break;
+            case 6:
+                opInterpolate.InterpolateLagrange();
                 break;
             default:
                 System.out.println("Ha ingresado una opcion incorrecta");
