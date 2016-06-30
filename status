@@ -1,0 +1,47 @@
+[33mcommit 32394ee9688a1d0f0ad71dcf2222e586ff13b11c[m
+Author: edalx <edd_alex.66@hotmail.com>
+Date:   Wed Jun 29 11:56:01 2016 -0500
+
+    Advanced linear system
+
+[33mcommit 2d76a892e4a85474fe8ba68e2aab8c289ad10830[m
+Author: edalx <edd_alex.66@hotmail.com>
+Date:   Wed May 25 23:49:43 2016 -0500
+
+    Add Interpolation module
+
+[33mcommit dd39fa4c108aa2c94fc97f2a085467882db97fd0[m
+Author: edalx <edd_alex.66@hotmail.com>
+Date:   Wed May 25 21:04:31 2016 -0500
+
+    Actualizacion paquetes metodos
+
+[33mcommit 7bff3ca6b1adedde7918a78bd26aec2df5f9faa3[m
+Author: edalx <edd_alex.66@hotmail.com>
+Date:   Wed May 4 23:28:38 2016 -0500
+
+    Actualizado con Maven y agregado derivacion e integracion Numerica
+
+[33mcommit 9f930f69b72fb993276dfc97714add352582ac72[m
+Author: edalx <edd_alex.66@hotmail.com>
+Date:   Wed Apr 27 22:37:51 2016 -0500
+
+    Agregado algoritmo de cambio de base
+
+[33mcommit ecda8ddb188fe7d70f69bb788c19509c3d00e535[m
+Author: edalx <edd_alex.66@hotmail.com>
+Date:   Thu Apr 21 10:13:30 2016 -0500
+
+    Actualizaci-n vectores ortogonales
+
+[33mcommit 118976ecb0fce16d19f41bb668315635360facb7[m
+Author: Alexander Cuji <edd_alex.66@hotmail.com>
+Date:   Wed Apr 20 20:32:00 2016 -0500
+
+    Completo vectores ortogonales
+
+[33mcommit d57b362a33f0eaeb5ec861fb21801d85e631451d[m
+Author: Alexander Cuji <edd_alex.66@hotmail.com>
+Date:   Wed Apr 20 14:20:30 2016 -0500
+
+    Commit inicial
