@@ -185,9 +185,13 @@ public class SistemEcLinear extends javax.swing.JFrame {
                 result.append("Solucion sin pivote");
                 result.append("\n");
                 Double[] resultado = oper.gaussSinPivote(matriz1, matriz2);
+                if(resultado!=null){
                 for (int i = 0; i < resultado.length; i++) {
                     result.append("x" + (i + 1) + "=" + resultado[i]);
                     result.append("\n");
+                }
+                }else{
+                    result.append("\n\nEl sistema tiene infinitas soluciones");
                 }
                 break;
             case 1:
