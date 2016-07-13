@@ -11,10 +11,10 @@ package edalx.methods;
  */
 public class EliminacionGaussiana {
 
-    public Double[] gaussSinPivote(Double[][] matriz, Double[] coef) {
-        Double[] result = new Double[coef.length];
-        Double[][] aumen = new Double[coef.length][coef.length + 1];
-        Double[] x = new Double[coef.length];
+    public double[] gaussSinPivote(double[][] matriz, double[] coef) {
+        double[] result = new double[coef.length];
+        double[][] aumen = new double[coef.length][coef.length + 1];
+        double[] x = new double[coef.length];
         for (int i = 0; i < coef.length; i++) {
             for (int j = 0; j < coef.length + 1; j++) {
                 if (j == coef.length) {
@@ -81,7 +81,7 @@ public class EliminacionGaussiana {
 
     }
 
-    public void printMatrizAumen(Double[][] aumen) {
+    public void printMatrizAumen(double[][] aumen) {
 
         for (int i = 0; i < aumen.length; i++) {
             for (int j = 0; j < aumen.length + 1; j++) {
@@ -97,16 +97,16 @@ public class EliminacionGaussiana {
         Double[] coef = {1.0, 2.0, 3.0};
         Double[] result = gaussSinPivote(a, coef);
     }*/
-    public Double[] PartialPivoting(Double[][] matriz, Double[] coef) {
+    public double[] PartialPivoting(double[][] matriz, double[] coef) {
         int r = 0;
         double aux;
         double aux1;
         double m = 0;
         int n = coef.length;
         //Carga matriz aumentada
-        Double[] result = new Double[coef.length];
-        Double[][] aumen = new Double[n][n + 1];
-        Double[] x = new Double[n];
+        double[] result = new double[coef.length];
+        double[][] aumen = new double[n][n + 1];
+        double[] x = new double[n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n + 1; j++) {
                 if (j == n) {
