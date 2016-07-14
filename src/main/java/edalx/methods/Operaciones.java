@@ -32,8 +32,8 @@ public class Operaciones {
      * @param filas dimension de la nueva matriz
      * @return El método devuelve una matriz de tokens convertidos a numeros
      */
-    public Double[][] capturaMatriz(String[] matriz1, int filas, int columnas) {
-        Double[][] matrizOriginal = new Double[filas][columnas];
+    public double[][] capturaMatriz(String[] matriz1, int filas, int columnas) {
+        double[][] matrizOriginal = new double[filas][columnas];
         for (int i = 0; i < filas; i++) {
             StringTokenizer st1 = new StringTokenizer(matriz1[i], ", ");
             for (int k = 0; k < columnas; k++) {
@@ -46,8 +46,8 @@ public class Operaciones {
         return matrizOriginal;
     }
 
-    public Double[] capturaVector(String[] matriz1, int filas) {
-        Double[] matrizOriginal = new Double[filas];
+    public double[] capturaVector(String[] matriz1, int filas) {
+        double[] matrizOriginal = new double[filas];
         for (int i = 0; i < filas; i++) {
             matrizOriginal[i] = Double.parseDouble(matriz1[i].trim());
         }

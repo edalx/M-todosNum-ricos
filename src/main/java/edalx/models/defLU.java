@@ -9,16 +9,16 @@ package edalx.models;
  *
  * @author edalx
  */
-public class mCrout {
+public class defLU {
     private double[][] L;
     private double[][] U;
 
-    public mCrout(double[][] L, double[][] U) {
+    public defLU(double[][] L, double[][] U) {
         this.L = L;
         this.U = U;
     }
 
-    public mCrout() {
+    public defLU() {
     }
 
     public double[][] getL() {

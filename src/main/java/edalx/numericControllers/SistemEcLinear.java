@@ -170,21 +170,21 @@ public class SistemEcLinear extends javax.swing.JFrame {
         String contenidoTexto1 = coefMat.getText();
         String[] matrizBorrador1 = new String[f1];
         matrizBorrador1 = cap.matrizTokens(contenidoTexto1, f1);//Se asigna los tokens a la matriz
-        Double[][] matriz1 = new Double[f1][f1];
+        double[][] matriz1 = new double[f1][f1];
         matriz1 = cap.capturaMatriz(matrizBorrador1, f1, f1);//Se almacena cada numero ingresado en la matriz
 
         //Vector extendido
         String contenidoTexto2 = coefResult.getText();
         String[] matrizBorrador2 = new String[f1];
         matrizBorrador2 = cap.matrizTokens(contenidoTexto2, f1);//Se asigna los tokens a la matriz
-        Double[] matriz2 = new Double[f1];
+        double[] matriz2 = new double[f1];
         matriz2 = cap.capturaVector(matrizBorrador2, f1);
 
         switch (chg) {
             case 0:
                 result.append("Solucion sin pivote");
                 result.append("\n");
-                Double[] resultado = oper.gaussSinPivote(matriz1, matriz2);
+                double[] resultado = oper.gaussSinPivote(matriz1, matriz2);
                 if(resultado!=null){
                 for (int i = 0; i < resultado.length; i++) {
                     result.append("x" + (i + 1) + "=" + resultado[i]);
@@ -197,7 +197,7 @@ public class SistemEcLinear extends javax.swing.JFrame {
             case 1:
                 result.append("Solucion con pivote parcial");
                 result.append("\n");
-                Double[]resultPP=oper.PartialPivoting(matriz1,matriz2);
+                double[]resultPP=oper.PartialPivoting(matriz1,matriz2);
                  for (int i = 0; i < resultPP.length; i++) {
                     result.append("x" + (i + 1) + "=" + resultPP[i]);
                     result.append("\n");
