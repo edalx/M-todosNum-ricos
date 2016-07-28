@@ -13,14 +13,10 @@ import java.util.Arrays;
  */
 public class Jacobi {
 
-    public static final int MAX_ITERATIONS = 100;
-    private double[][] M;
-
-    public Jacobi(double[][] matrix) {
-        M = matrix;
+    public Jacobi() {
     }
 
-    public void print() {
+    public void print(double M[][]) {
         int n = M.length;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -31,7 +27,7 @@ public class Jacobi {
         }
     }
 
-    public boolean transformToDominant(int r, boolean[] V, int[] R) {
+    public boolean transformToDominant(int r, boolean[] V, int[] R,double M[][]) {
         int n = M.length;
         if (r == M.length) {
             double[][] T = new double[n][n + 1];
@@ -54,7 +50,7 @@ public class Jacobi {
             if (2 * Math.abs(M[i][r]) > sum) { // diagonally dominant?
                 V[i] = true;
                 R[r] = i;
-                if (transformToDominant(r + 1, V, R)) {
+                if (transformToDominant(r + 1, V, R,M)) {
                     return true;
                 }
                 V[i] = false;
@@ -69,12 +65,12 @@ public class Jacobi {
      * absoluto del elemento de la diagonal de esa fila es estrictamente mayor
      * que la norma del resto de elementos de esa fila
      */
-    public boolean makeDominant() {
+    public boolean verifyDominant(double M[][]) {
         boolean[] visited = new boolean[M.length];
         int[] rows = new int[M.length];
         Arrays.fill(visited, false);
 
-        return transformToDominant(0, visited, rows);
+        return transformToDominant(0, visited, rows,M);
     }
 
     /**
@@ -84,7 +80,7 @@ public class Jacobi {
      * + ... + a_2n * x_n = b_2 . . . . . . . . . . . . a_n1 * x_n + a_n2 * x_2
      * + ... + a_nn * x_n = b_n
      */
-    public void solve(double tol, double[] P) {
+    public double[] solve(double tol, double[] P, int maxIterations, double[][] M) {
         int iterations = 1;
         int n = M.length;
         double[] X = new double[n];
@@ -100,10 +96,14 @@ public class Jacobi {
 
                 for (int j = 0; j < n; j++) {
                     if (j != i) {
-                        sum -= M[i][j] * P[j];
+                      sum -= M[i][j] * P[j];
                     }
                 }
+                if(M[i][i]!=0){
                 X[i] = 1 / M[i][i] * sum;
+                }else{
+                    return null;
+                }
             }
 
             System.out.print("X_" + iterations + " = {");
@@ -124,33 +124,12 @@ public class Jacobi {
                 }
             }
 
-            if (stop || iterations == MAX_ITERATIONS) {
+            if (stop || iterations == maxIterations) {
                 break;
             }
             P = (double[]) X.clone();
         }
+        return X;
     }
 
-    public static void main(String[] args) {
-        /* double[][] M = {{10.0, 2, 1, 7},
-        {1, 5, 1, -8},
-        {2, 3, 10, 6}};
-        double[] X = {0.7, -1.6, 0.6};*/
-        double[][] M = {{10, 1, 11},
-        {2, 10, 12}};
-        double[] X = {0.5, 0.5};
-        double tol = 0.01;
-
-        Jacobi jacobi = new Jacobi(M);
-
-        if (!jacobi.makeDominant()) {
-            System.out.println("El método es convergente o faltan iteraciones");
-        }
-
-        System.out.println("Matriz A");
-        jacobi.print();
-        System.out.println("");
-        jacobi.solve(tol, X);
-
-    }
 }
