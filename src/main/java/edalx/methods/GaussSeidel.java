@@ -18,7 +18,7 @@ public class GaussSeidel {
         double P[];
         System.out.print("X_0" + " = {");
         for (int i = 0; i < n; i++) {
-            System.out.print(X[i] + " ");
+            System.out.print(X[i] + "    ");
         }
         System.out.println("}");
         while (true) {
@@ -39,7 +39,7 @@ public class GaussSeidel {
 
             System.out.print("X_" + iterations + " = {");
             for (int i = 0; i < n; i++) {
-                System.out.print(X[i] + " ");
+                System.out.print(X[i] + "    ");
             }
             System.out.println("}");
 

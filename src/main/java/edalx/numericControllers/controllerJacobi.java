@@ -22,28 +22,35 @@ public class controllerJacobi {
        /* double[][] M = {{5, 1, 11},
                         {2, 10, 12}};
         double[] X = {0.5, 0.5};//*/
-       double[][] M = {{5,-2,1,3},
-                       {-1,-7,3,-2},
-                       {2,-1,8,1}
+       double[][] M = {{10,-1,2,0,6},
+                       {-1,1,-1,3,25},
+                       {2,-1,10,-1,-11},
+                       {0,3,-1,8,15}
        };
                    
-       double[] X = {0,0,0};
+       double[] X = {0,0,0,0};
         double tol = 0.000001;
         int maxIterations=100;
         Jacobi method=new Jacobi();
-        
+        Double prueba=new Double("0.0000");
+          if (prueba==0) {
+                      System.out.println(""+prueba);
+
+              
+          }
+  
 
 
-        if (!method.verifyDominant(M)) {
+        //if (!method.verifyDominant(M)) {
             System.out.println("**************************************************************************************");
             System.out.println("              El método no es convergente o faltan iteraciones");
             System.out.println("**************************************************************************************");
-        }else{
+        //}else{
 
         System.out.println("Matriz A");
         method.print(M);
         System.out.println("");
         method.solve(tol, X,maxIterations,M);
-    }
+   // }
       }
 }
