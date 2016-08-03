@@ -17,7 +17,7 @@ public class PivoteTotal {
     
     public static void main(String[] args) {
         //double[][] matriz = {{6.0,-2.0,2.0,4.0,12.0}, {12.0,-8.0,6.0,10.0,34.0}, {3.0,-13.0,9.0,3.0,27.0},{-6.0,4.0,1.0,-18.0,-38.0}};
-       double[][] matriz = {{1.0,2,3,1.0}, {4,5,6,2.0},{7,8,9,3}};
+       double[][] matriz = {{5,-12,3,1.0}, {4,-9,6,-2.0},{7,8,-9,3}};
         eliminacionGaussianaPivoteoTotal(3,matriz);
     }
         public static void eliminacionGaussianaPivoteoTotal(int n, double[][] matriz){   
