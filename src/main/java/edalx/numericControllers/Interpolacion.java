@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author edalx
  */
 public class Interpolacion {
-    public void InterpolateLagrange() {
+    public static void InterpolateLagrange() {
         Scanner leer = new Scanner(System.in);
         int nPoints = 0;
         String[] coordenadas = new String[2];
@@ -30,7 +30,7 @@ public class Interpolacion {
         System.out.println("Ingrese los puntos a interpolar");
         for (int i = 0; i < nPoints; i++) {
             auxPoints = leer.nextLine();
-            coordenadas = auxPoints.split(";");
+            coordenadas = auxPoints.split(",");
             compX[i]=Double.parseDouble(coordenadas[0]);
             compY[i]=Double.parseDouble(coordenadas[1]);            
         }
@@ -50,6 +50,10 @@ public class Interpolacion {
         System.out.println("El valor de la función evaluada en "+inicPoint+ " es "+evalPol);
         
     } 
+    
+    public static void main(String[] args) {
+        InterpolateLagrange();
+    }
     }
  
    
