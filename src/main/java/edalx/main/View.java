@@ -51,9 +51,7 @@ public class View {
             case 3:
                 integra.main();
                 break;
-            case 4:
-                deriva.main();
-                break;
+           
             case 5:
                 System.out.println("Elija el método para la obtención de raices");
                 System.out.println("1) Bisección    2) Punto Fijo      3) Raphson");

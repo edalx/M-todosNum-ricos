@@ -51,6 +51,7 @@ public class SistemEcLinear extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         result = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -97,29 +98,24 @@ public class SistemEcLinear extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(72, 72, 72))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(changeMethod, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(20, 20, 20)
-                                        .addComponent(n, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(53, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(31, 31, 31)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(changeMethod, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addGap(20, 20, 20)
+                                    .addComponent(n, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,8 +148,8 @@ public class SistemEcLinear extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -164,42 +160,49 @@ public class SistemEcLinear extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
+        jButton1.setText("Regresar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addComponent(exec, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(144, 144, 144))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(exec, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(144, 144, 144))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(102, 102, 102))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(exec)
                     .addComponent(Limpiar))
-                .addGap(36, 36, 36)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         pack();
@@ -210,123 +213,101 @@ public class SistemEcLinear extends javax.swing.JFrame {
         EliminacionGaussiana oper = new EliminacionGaussiana();
         int chg = changeMethod.getSelectedIndex();
         result.setText("");
-        int f1 = Integer.parseInt(n.getText());
 
-        //Matriz coeficientes
-        String contenidoTexto1 = coefMat.getText();
-        String[] matrizBorrador1 = new String[f1];
-        matrizBorrador1 = cap.matrizTokens(contenidoTexto1, f1);//Se asigna los tokens a la matriz
-        double[][] matriz1 = new double[f1][f1];
-        matriz1 = cap.capturaMatriz(matrizBorrador1, f1, f1);//Se almacena cada numero ingresado en la matriz
+        try {
+            int f1 = Integer.parseInt(n.getText());
 
-        //Vector extendido
-        String contenidoTexto2 = coefResult.getText();
-        String[] matrizBorrador2 = new String[f1];
-        matrizBorrador2 = cap.matrizTokens(contenidoTexto2, f1);//Se asigna los tokens a la matriz
-        double[] matriz2 = new double[f1];
-        matriz2 = cap.capturaVector(matrizBorrador2, f1);
-        double[][] matrizAumentada = new double[f1][f1 + 1];
+            //Matriz coeficientes
+            String contenidoTexto1 = coefMat.getText();
+            String[] matrizBorrador1 = new String[f1];
+            matrizBorrador1 = cap.matrizTokens(contenidoTexto1, f1);//Se asigna los tokens a la matriz
+            double[][] matriz1 = new double[f1][f1];
+            matriz1 = cap.capturaMatriz(matrizBorrador1, f1, f1);//Se almacena cada numero ingresado en la matriz
 
-        for (int i = 0; i < f1; i++) {
-            for (int j = 0; j <= f1; j++) {
-                if (j == f1) {
-                    matrizAumentada[i][j] = matriz2[i];
-                } else {
-                    matrizAumentada[i][j] = matriz1[i][j];
+            //Vector extendido
+            String contenidoTexto2 = coefResult.getText();
+            String[] matrizBorrador2 = new String[f1];
+            matrizBorrador2 = cap.matrizTokens(contenidoTexto2, f1);//Se asigna los tokens a la matriz
+            double[] matriz2 = new double[f1];
+            matriz2 = cap.capturaVector(matrizBorrador2, f1);
+            double[][] matrizAumentada = new double[f1][f1 + 1];
+
+            for (int i = 0; i < f1; i++) {
+                for (int j = 0; j <= f1; j++) {
+                    if (j == f1) {
+                        matrizAumentada[i][j] = matriz2[i];
+                    } else {
+                        matrizAumentada[i][j] = matriz1[i][j];
+                    }
                 }
+
             }
 
-        }
+            switch (chg) {
+                case 0:
 
-        switch (chg) {
-            case 0:
-                result.append("Solucion sin pivote");
-                result.append("\n");
-                double[] resultado = oper.gaussSinPivote(matriz1, matriz2);
-                if (resultado != null) {
-                    for (int i = 0; i < resultado.length; i++) {
-                        result.append("x" + (i + 1) + "=" + resultado[i]);
+                    double[] resultado = oper.gaussSinPivote(matriz1, matriz2);
+                    if (resultado != null) {
+                        result.append("Solucion sin pivote");
                         result.append("\n");
+                        for (int i = 0; i < resultado.length; i++) {
+                            result.append("x" + (i + 1) + "=" + resultado[i]);
+                            result.append("\n");
+                        }
+                    } else {
+                        JOptionPane.showOptionDialog(this, "La matriz A es singular", "Error", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
                     }
-                } else {
-                    JOptionPane.showOptionDialog(this, "Existen ceros en la diagonal principal", "Error", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
-                }
-                break;
-            case 1:
-                result.append("Solucion con pivote parcial");
-                result.append("\n");
-                double[] resultPP = oper.PartialPivoting(matriz1, matriz2);
-               if (resultPP != null) {
-                for (int i = 0; i < resultPP.length; i++) {
-                    result.append("x" + (i + 1) + "=" + resultPP[i]);
-                    result.append("\n");
-                }
-               } else {
-                    JOptionPane.showOptionDialog(this, "Existen ceros en la diagonal principal", "Error", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
-                }
-                break;
+                    break;
+                case 1:
 
-            case 2:
-                result.append("Solución con pivote total");
-                result.append("\n");
-                ModelPivoting resulPT = oper.eliminacionGaussianaPivoteoTotal(f1, matrizAumentada);
-                if(result!=null){
-                for (int i = 0; i < f1; i++) {
-                    result.append("X" + resulPT.getMarcas()[i] + " = " + resulPT.getResultado()[i]);
-                    result.append("\n");
-                }
-                }else{
-                      JOptionPane.showOptionDialog(this, "Existen ceros en la diagonal principal", "Error", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
-                }
-                break;
+                    double[] resultPP = oper.PartialPivoting(matriz1, matriz2);
+                    if (resultPP != null) {
+                        result.append("Solucion con pivote parcial");
+                        result.append("\n");
+                        for (int i = 0; i < resultPP.length; i++) {
+                            result.append("x" + (i + 1) + "=" + resultPP[i]);
+                            result.append("\n");
+                        }
+                    } else {
+                        JOptionPane.showOptionDialog(this, "La matriz A es singular", "Error", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
+                    }
+                    break;
 
-            default:
-                System.out.println("Ha ingresado una opción incorrecta");
+                case 2:
+
+                    ModelPivoting resulPT = oper.eliminacionGaussianaPivoteoTotal(f1, matrizAumentada);
+                    if (resulPT != null) {
+                        result.append("Solución con pivote total");
+                        result.append("\n");
+                        for (int i = 0; i < f1; i++) {
+                            result.append("X" + resulPT.getMarcas()[i] + " = " + resulPT.getResultado()[i]);
+                            result.append("\n");
+                        }
+                    } else {
+                        JOptionPane.showOptionDialog(this, "La matriz A es singular", "Error", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
+                        result.append("El sistema no tiene solución única");
+                    }
+
+                    break;
+
+                default:
+                    System.out.println("Ha ingresado una opción incorrecta");
+            }
+
+        } catch (Exception err) {
+            JOptionPane.showOptionDialog(this, "No se han ingresado correctamente los datos", "Advertencia", JOptionPane.WARNING_MESSAGE, JOptionPane.WARNING_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
+
         }
-
-
     }//GEN-LAST:event_execActionPerformed
 
     private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarActionPerformed
         coefMat.setText("");
         coefResult.setText("");
         result.setText("");
+        n.setText("");
     }//GEN-LAST:event_LimpiarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SistemEcLinear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SistemEcLinear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SistemEcLinear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SistemEcLinear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SistemEcLinear().setVisible(true);
-            }
-        });
-    }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Limpiar;
@@ -335,6 +316,7 @@ public class SistemEcLinear extends javax.swing.JFrame {
     private javax.swing.JTextArea coefMat;
     private javax.swing.JTextArea coefResult;
     private javax.swing.JButton exec;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

@@ -33,14 +33,17 @@ public class IntegracionNumerica {
         return result;
     }
    
-    public double trapecio(String function, double a, double b, int n){
+    public Double trapecio(String function, double a, double b, int n){
         double sizePartition=(b-a)/n;
         double result=0;
+        try{
         for (int i = 1; i < n; i++) {
             result=result+evalFunction(function,a+i*sizePartition);
         }
         result=(sizePartition/2)*(evalFunction(function, a)+evalFunction(function, b))+sizePartition*result;
-        
+        }catch(Exception err){
+            return null;
+        }
         return result;
         
     }

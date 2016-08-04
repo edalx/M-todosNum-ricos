@@ -25,9 +25,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="145" max="-2" attributes="0"/>
+              <Component id="limpiar" min="-2" pref="145" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="153" max="-2" attributes="0"/>
+              <Component id="exec" min="-2" pref="153" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -43,6 +43,7 @@
                           <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="Salir" alignment="1" min="-2" pref="136" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="40" max="32767" attributes="0"/>
           </Group>
@@ -57,12 +58,14 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jButton1" pref="36" max="32767" attributes="0"/>
-                  <Component id="jButton2" max="32767" attributes="0"/>
+                  <Component id="exec" pref="36" max="32767" attributes="0"/>
+                  <Component id="limpiar" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="27" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="Salir" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -106,15 +109,15 @@
                           </Group>
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jComboBox1" pref="142" max="32767" attributes="0"/>
-                              <Component id="jTextField1" max="32767" attributes="0"/>
-                              <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="method" pref="142" max="32767" attributes="0"/>
+                              <Component id="inf" max="32767" attributes="0"/>
+                              <Component id="part" alignment="0" max="32767" attributes="0"/>
+                              <Component id="sup" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="jTextField4" min="-2" pref="403" max="-2" attributes="0"/>
+                          <Component id="func" min="-2" pref="403" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="68" max="32767" attributes="0"/>
@@ -127,27 +130,27 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="method" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextField1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="inf" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                      <Component id="jTextField2" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="sup" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField3" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="part" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField4" pref="29" max="32767" attributes="0"/>
+                  <Component id="func" pref="29" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -159,13 +162,12 @@
             <Property name="text" type="java.lang.String" value="Seleccione el m&#xe9;todo de integraci&#xf3;n:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="method">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="2">
                 <StringItem index="0" value="Regla del Trapecio"/>
                 <StringItem index="1" value="Simpson 1/3"/>
-                <StringItem index="2" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -183,35 +185,41 @@
             <Property name="text" type="java.lang.String" value="Limite superior:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="inf">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Numero de particiones:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="sup">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="part">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ingrese la funci&#xf3;n:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
+        <Component class="javax.swing.JTextField" name="func">
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="exec">
       <Properties>
         <Property name="text" type="java.lang.String" value="Calcular"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="execActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="limpiar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Limpiar campos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limpiarActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
@@ -250,7 +258,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea1">
+            <Component class="javax.swing.JTextArea" name="result">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -260,5 +268,13 @@
         </Container>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="Salir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Regresar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalirActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

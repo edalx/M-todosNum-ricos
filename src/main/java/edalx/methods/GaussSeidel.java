@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edalx.methods;
+
+import java.util.Arrays;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -11,16 +9,18 @@ package edalx.methods;
  */
 public class GaussSeidel {
 
-    public double[] solve(double[][] M, double b[], double X[], int maxIterations, double tol) {
+    public double[] solve(double[][] M, double b[], double X[], int maxIterations, double tol, JTextArea resultado) {
         int iterations = 1;
         int n = M.length;
+
         double sum;
         double P[];
-        System.out.print("X_0" + " = {");
+        resultado.append("X_0" + " = {");
         for (int i = 0; i < n; i++) {
-            System.out.print(X[i] + "    ");
+            resultado.append(X[i] + "\t");
         }
-        System.out.println("}");
+        double var = 1000000000000.0;
+        resultado.append("}\n");
         while (true) {
             P = (double[]) X.clone();
             for (int i = 0; i < n; i++) {
@@ -37,11 +37,11 @@ public class GaussSeidel {
                 }
             }
 
-            System.out.print("X_" + iterations + " = {");
+            resultado.append("X_" + iterations + " = {");
             for (int i = 0; i < n; i++) {
-                System.out.print(X[i] + "    ");
+                resultado.append(X[i] + "\t");
             }
-            System.out.println("}");
+            resultado.append("}\n");
 
             iterations++;
             if (iterations == 1) {
@@ -51,8 +51,11 @@ public class GaussSeidel {
             boolean stop = true;
             for (int i = 0; i < n && stop; i++) {
                 if (Math.abs(X[i] - P[i]) > tol) {
-                    stop = false;
+                    if (Math.abs(X[i] - P[i]) < var) {
+                       
+                    }
                 }
+                var = Math.abs(X[i] - P[i]);
             }
 
             if (stop || iterations == maxIterations) {
@@ -61,21 +64,5 @@ public class GaussSeidel {
 
         }
         return X;
-    }
-
-    public static void main(String[] args) {
-        double[][] M = {{5, -2, 1},
-                        {-1, -7, 3},
-                        {2, -1, 8}
-        };
-        double[] b = {3, -2, 1};
-        double[] X = {0, 0, 0};
-        double tol = 0.000001;
-        int maxIterations = 100;
-        GaussSeidel method = new GaussSeidel();
-        System.out.println("Matriz A");
-        System.out.println("");
-        method.solve(M, b, X, maxIterations, tol);
-
     }
 }
