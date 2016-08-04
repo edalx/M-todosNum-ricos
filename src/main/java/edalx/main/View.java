@@ -8,7 +8,7 @@ package edalx.main;
 import edalx.numericControllers.CambioDeBase;
 import edalx.numericControllers.ControlerIntegracion;
 import edalx.numericControllers.DerivacionNumerica;
-import edalx.numericControllers.EcuacionesNoLineales;
+import edalx.numericControllers.OperEcuacionesNoLineales;
 import edalx.numericControllers.Interpolacion;
 import edalx.numericControllers.VectoresOrtogonales;
 import java.util.Scanner;
@@ -24,7 +24,7 @@ public class View {
         CambioDeBase op = new CambioDeBase();
         ControlerIntegracion integra = new ControlerIntegracion();
         DerivacionNumerica deriva = new DerivacionNumerica();
-        EcuacionesNoLineales ecuacNoLineal = new EcuacionesNoLineales();
+        OperEcuacionesNoLineales ecuacNoLineal = new OperEcuacionesNoLineales();
         Interpolacion opInterpolate=new Interpolacion();
         Scanner leer = new Scanner(System.in);
         int opc2 = 0;

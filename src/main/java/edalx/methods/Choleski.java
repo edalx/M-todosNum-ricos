@@ -14,7 +14,7 @@ import java.util.Arrays;
  */
 public class Choleski {
 
-    public  boolean isSymmetric(double[][] A) {
+    public boolean isSymmetric(double[][] A) {
         int N = A.length;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < i; j++) {
@@ -26,7 +26,7 @@ public class Choleski {
         return true;
     }
 
-    public  boolean isSquare(double[][] A) {
+    public boolean isSquare(double[][] A) {
         int N = A.length;
         for (int i = 0; i < N; i++) {
             if (A[i].length != N) {
@@ -71,7 +71,11 @@ public class Choleski {
 
                     Suma += L[j - 1][p] * U[p][k - 1];
                 }
-                L[j - 1][k - 1] = (A[j - 1][k - 1] - Suma) / L[k - 1][k - 1];
+                if (L[k - 1][k - 1] != 0) {
+                    L[j - 1][k - 1] = (A[j - 1][k - 1] - Suma) / L[k - 1][k - 1];
+                } else {
+                    return null;
+                }
             }
 
             System.out.println("Matriz L");
@@ -81,7 +85,11 @@ public class Choleski {
                 for (int p = 0; p < k - 1; p++) {
                     Suma += L[k - 1][p] * U[p][i - 1];
                 }
-                U[k - 1][i - 1] = (A[k - 1][i - 1] - Suma) / L[k - 1][k - 1];
+                if (L[k - 1][k - 1] != 0) {
+                    U[k - 1][i - 1] = (A[k - 1][i - 1] - Suma) / L[k - 1][k - 1];
+                } else {
+                    return null;
+                }
             }
             System.out.println("Matriz L(t)");
             ImprimirMatriz(U, n);
@@ -93,7 +101,7 @@ public class Choleski {
 
     }
 
-    public  double[] SustitucionProgresiva(double[][] L, double[] b) {
+    public double[] SustitucionProgresiva(double[][] L, double[] b) {
         int n = L.length;
         double z[] = new double[n];
         for (int i = 1; i < n + 1; ++i) {
@@ -108,7 +116,7 @@ public class Choleski {
         return z;
     }
 
-    public  double[] SustitucionRegresiva(double[][] U, double[] z) {
+    public double[] SustitucionRegresiva(double[][] U, double[] z) {
         int n = U.length;
         double[] x = new double[n];
         for (int i = n - 1; i >= 0; --i) {
