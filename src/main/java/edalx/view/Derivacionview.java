@@ -5,6 +5,7 @@
  */
 package edalx.view;
 
+import main.Main;
 import edalx.numericControllers.DerivacionNumerica;
 import javax.swing.JOptionPane;
 
@@ -210,7 +211,9 @@ public class Derivacionview extends javax.swing.JFrame {
     }//GEN-LAST:event_limpiarActionPerformed
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        // TODO add your handling code here:
+          Main gh=new Main();
+        gh.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_RegresarActionPerformed
 
 

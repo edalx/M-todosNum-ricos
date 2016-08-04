@@ -5,6 +5,7 @@
  */
 package edalx.view;
 
+import main.Main;
 import edalx.methods.IntegracionNumerica;
 import javax.swing.JOptionPane;
 
@@ -260,7 +261,9 @@ public class Integracionview extends javax.swing.JFrame {
     }//GEN-LAST:event_execActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-        // TODO add your handling code here:
+          Main gh=new Main();
+        gh.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_SalirActionPerformed
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed

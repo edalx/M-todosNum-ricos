@@ -5,6 +5,7 @@
  */
 package edalx.view;
 
+import main.Main;
 import edalx.methods.Bases;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -136,6 +137,11 @@ public class CambiodeBaseview extends javax.swing.JFrame {
         );
 
         regresar.setText("Regresar");
+        regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -229,6 +235,12 @@ public class CambiodeBaseview extends javax.swing.JFrame {
         baseD.setText("");
         result.setText("");
     }//GEN-LAST:event_limpiarActionPerformed
+
+    private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
+          Main gh=new Main();
+        gh.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_regresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,6 +5,7 @@
  */
 package edalx.view;
 
+import main.Main;
 import edalx.methods.Bases;
 import edalx.methods.OperacionesVectores;
 import java.util.Scanner;
@@ -129,6 +130,11 @@ public class BaseOrtogonal extends javax.swing.JFrame {
         );
 
         regresar.setText("Regresar");
+        regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -237,6 +243,12 @@ public class BaseOrtogonal extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_execActionPerformed
+
+    private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
+        Main gh=new Main();
+        gh.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_regresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

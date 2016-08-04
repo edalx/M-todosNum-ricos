@@ -5,6 +5,7 @@
  */
 package edalx.view;
 
+import main.Main;
 import edalx.numericControllers.OperEcuacionesNoLineales;
 import javax.swing.JOptionPane;
 
@@ -158,6 +159,11 @@ public class EcuacionesNoLineales extends javax.swing.JFrame {
         });
 
         regresar.setText("Regresar");
+        regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regresarActionPerformed(evt);
+            }
+        });
 
         exec.setText("Calcular");
         exec.addActionListener(new java.awt.event.ActionListener() {
@@ -253,6 +259,12 @@ public class EcuacionesNoLineales extends javax.swing.JFrame {
           JOptionPane.showOptionDialog(this, "No se han ingresado correctamente los datos", "Advertencia", JOptionPane.WARNING_MESSAGE, JOptionPane.WARNING_MESSAGE, null, new Object[]{" Aceptar "}, "Aceptar");
       }
     }//GEN-LAST:event_execActionPerformed
+
+    private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
+          Main gh=new Main();
+        gh.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_regresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
